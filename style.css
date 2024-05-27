@@ -75,7 +75,7 @@ nav {
 
 .header-content img {
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; /* Increased size of the title image */
 }
 
 .youtube-container,
@@ -149,7 +149,7 @@ main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     backdrop-filter: blur(10px);
-    color: #000000; /* Change text color to black */
+    color: #00008B; /* Change text color to dark blue */
 }
 
 .centered {
