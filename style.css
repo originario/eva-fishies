@@ -164,9 +164,25 @@ main {
     margin-top: 10px;
 }
 
-@media (min-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        justify-content: space-between;
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    body {
+        background-size: cover; /* Ensure background covers the viewport */
+    }
+
+    .header-content img {
+        max-width: 100%; /* Ensure image fits within the viewport */
+    }
+
+    .youtube-container,
+    .gif-container {
+        max-width: 100%; /* Ensure containers fit within the viewport */
+        border: 5px solid rgba(0, 0, 0, 0.3); /* Adjust border size for mobile */
+    }
+
+    .windows-7-tab {
+        width: 95%; /* Ensure tabs fit within the viewport */
+        margin: 10px 0; /* Reduce margin for mobile */
+        padding: 10px; /* Reduce padding for mobile */
     }
 }
