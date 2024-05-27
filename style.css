@@ -78,6 +78,13 @@ nav {
     max-width: 1000px; /* Increased size of the title image */
 }
 
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    .header-content img {
+        max-width: 90%; /* Ensure image fits within the viewport */
+    }
+}
+
 .youtube-container,
 .gif-container {
     position: relative;
@@ -149,7 +156,7 @@ main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     backdrop-filter: blur(10px);
-    color: black; /* Change text color to black */
+    color: black !important; /* Enforce text color to black */
 }
 
 .centered {
