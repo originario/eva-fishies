@@ -25,6 +25,17 @@ body {
     min-height: 100vh;
 }
 
+/* Debugging element */
+.debug-box {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+}
+
 /* Ensure main container takes up full width */
 main.container {
     width: 100%;
