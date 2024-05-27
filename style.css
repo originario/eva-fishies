@@ -180,3 +180,52 @@ main {
     animation-duration: 14s;
     left: 30%;
 }
+
+.bubble:nth-child(5) {
+    width: 35px;
+    height: 35px;
+    animation-duration: 16s;
+    left: 40%;
+}
+
+.bubble:nth-child(6) {
+    width: 45px;
+    height: 45px;
+    animation-duration: 18s;
+    left: 50%;
+}
+
+.bubble:nth-child(7) {
+    width: 50px;
+    height: 50px;
+    animation-duration: 20s;
+    left: 60%;
+}
+
+.bubble:nth-child(8) {
+    width: 60px;
+    height: 60px;
+    animation-duration: 22s;
+    left: 70%;
+}
+
+.bubble:nth-child(9) {
+    width: 65px;
+    height: 65px;
+    animation-duration: 24s;
+    left: 80%;
+}
+
+.bubble:nth-child(10) {
+    width: 70px;
+    height: 70px;
+    animation-duration: 26s;
+    left: 90%;
+}
+
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
