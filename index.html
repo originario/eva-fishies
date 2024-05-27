@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+    <style>
+        body {
+            background: linear-gradient(135deg, #91FF7D 25%, #73EEFF 50%, #FFE900 75%);
+            background-size: 200% 200%;
+            animation: gradientAnimation 15s ease infinite;
+            color: black; /* Changed text color to black for better readability */
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Changed from center to flex-start for scrolling */
+            align-items: center;
+            overflow-y: scroll; /* Allow vertical scrolling */
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1, h2, h3, p, strong {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px; /* Added margin to move the title lower */
+        }
+
+        .header-content img {
+            width: 100%;
+            max-width: 600px; /* Increased size of the title image */
+        }
+
+        .youtube-container,
+        .gif-container {
+            position: relative;
+            width: 100%;
+            max-width: 560px;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            margin-top: 20px;
+            border: 10px solid rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .youtube-container {
+            margin-bottom: 20px; /* Space between YouTube player and GIF */
+        }
+
+        .youtube-embed,
+        .giphy-embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .windows-7-tab {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+        }
+
+        .windows-7-header {
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 3em;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .windows-7-content {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .gif-container {
+            max-width: 320px;
+            padding-bottom: 45%;
+            /* Adjust to make the gif smaller */
+            margin-top: 10px;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 10s infinite ease-in;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-1500px);
+                opacity: 0;
+            }
+        }
+
+        .bubble:nth-child(2) {
+            width: 20px;
+            height: 20px;
+            animation-duration: 8s;
+            left: 10%;
+        }
+
+        .bubble:nth-child(3) {
+            width: 25px;
+            height: 25px;
+            animation-duration: 12s;
+            left: 20%;
+        }
+
+        .bubble:nth-child(4) {
+            width: 30px;
+            height: 30px;
+            animation-duration: 14s;
+            left: 30%;
+        }
+
+        .bubble:nth-child(5) {
+            width: 35px;
+            height: 35px;
+            animation-duration: 16s;
+            left: 40%;
+        }
+
+        .bubble:nth-child(6) {
+            width: 45px;
+            height: 45px;
+            animation-duration: 18s;
+            left: 50%;
+        }
+
+        .bubble:nth-child(7) {
+            width: 50px;
+            height: 50px;
+            animation-duration: 20s;
+            left: 60%;
+        }
+
+        .bubble:nth-child(8) {
+            width: 60px;
+            height: 60px;
+            animation-duration: 22s;
+            left: 70%;
+        }
+
+        .bubble:nth-child(9) {
+            width: 65px;
+            height: 65px;
+            animation-duration: 24s;
+            left: 80%;
+        }
+
+        .bubble:nth-child(10) {
+            width: 70px;
+            height: 70px;
+            animation-duration: 26s;
+            left: 90%;
+        }
+
+        @media (min-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <title>E.V.A. Fishies</title>
+</head>
+
+<body>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <nav class="container-fluid">
+        <div class="header-content centered">
+            <img src="eva-fishies.png" alt="E.V.A. Fishies">
+            <div class="youtube-container">
+                <iframe class="youtube-embed" src="https://www.youtube.com/embed/DP3rDP02lE0?autoplay=1&mute=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="grid centered">
+            <section class="windows-7-tab">
+                <div class="windows-7-header">
+                    <span>Bigotón</span>
+                </div>
+                <div class="windows-7-content">
+                    <h3>Albino Corydoras Aeneus</h3>
+                    <p> Full Name: 
+                    </p>
+                    <figure>
+                        <img src="bigo.jpeg" alt="Bigotón" />
+                    </figure>
+                </div>
+            </section>
+            <section class="windows-7-tab">
+                <div class="windows-7-header">
+                    <span> Webster </span>
+                </div>
+                <div class="windows-7-content">
+                    <h3>Gymnocorymbus ternetzi
+</h3>
+                    <p>Nickname: Webon</p>
+                    <figure>
+                        <img src="web.jpeg" />
+                    </figure>
+                </div>
+            </section>
+            <section class="windows-7-tab">
+                <div class="windows-7-header">
+                    <span>Titi</span>
+                </div>
+                <div class="windows-7-content">
+                    <h3>A sleek and slim black fish</h3>
+                    <p>The black molly is known for its distinctive black coloration and active behavior.</p>
+                    <figure>
+                        <img src="misc.png" alt="Black Molly" />
+                    </figure>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="container">
+        <small></small>
+    </footer>
+    <div class="gif-container centered">
+        <iframe class="giphy-embed" src="https://giphy.com/embed/b8se2gPSubVTbZL7LY" allowFullScreen></iframe>
+    </div>
+</body>
+
+</html>
