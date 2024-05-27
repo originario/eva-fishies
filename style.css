@@ -1,4 +1,4 @@
-/* Reset CSS to ensure consistent cross-browser styling */
+/* CSS Reset to ensure consistent cross-browser styling */
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +6,13 @@
 }
 
 /* Ensure body takes up full width and height */
-body {
-    width: 100vw;
+html, body {
+    width: 100%;
+    height: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
     background: linear-gradient(135deg, #91FF7D 25%, #73EEFF 50%, #FFE900 75%);
     background-size: 200% 200%;
     animation: gradientAnimation 15s ease infinite;
@@ -36,7 +40,7 @@ main.container {
     padding: 20px;
 }
 
-/* Update your existing CSS below */
+/* Keyframes for background animation */
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
