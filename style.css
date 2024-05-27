@@ -167,7 +167,7 @@ main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     backdrop-filter: blur(10px);
-    color: #000000 !important; /* Enforce text color to black */
+    color:black !important; /* Enforce text color to black */
 }
 
 .centered {
